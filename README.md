@@ -1,8 +1,10 @@
 # clean-code-performance
 
+## Introduction
+
 A Java 25 / JMH microbenchmark suite that reproduces (as closely as the JVM
-allows) the comparisons from the article *"Clean" Code, Horrible
-Performance* (the C++ shape-area example): polymorphism vs switch statements
+allows) the comparisons from the article [*"Clean" Code, Horrible
+Performance*](https://www.computerenhance.com/p/clean-code-horrible-performance) (the C++ shape-area example): polymorphism vs switch statements
 vs table-driven code, and how the performance gap changes as more properties
 are added to the data model.
 
@@ -10,6 +12,16 @@ This project does **not** try to prove or disprove the article's specific
 numbers - it gives you a working, reproducible harness to measure the
 *same class of effect* on the JVM, with its own caveats clearly called out
 below.
+
+
+## Key Insight
+
+Clean code principles optimize for human comprehension, while data-oriented design optimizes for machine execution. 
+When performance is critical, machine-oriented design often wins.
+
+For most Java enterprise systems, maintainability is the bottleneck. 
+For performance-critical inner loops, the article contains useful warnings.
+
 
 ## Requirements
 
